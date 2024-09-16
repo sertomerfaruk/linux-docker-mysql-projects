@@ -1,0 +1,12 @@
+services:
+  db:
+    image: 'bitnami/mysql:latest'
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: db
+      MYSQL_USER: omer
+      MYSQL_PASSWORD: 12345
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - "3306:3306"
